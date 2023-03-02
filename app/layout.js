@@ -1,4 +1,10 @@
 import './globals.css'
+import { Inter } from '@next/font/google'
+
+const inter = Inter({ 
+                        subsets: ['latin'],
+                        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+                     })
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +14,7 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className={`${inter.className} mx-32`}>{children}</body>
     </html>
   )
 }
